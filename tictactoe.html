@@ -1,27 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tic Tac Toe</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=devide-width,
+	initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="board.css">
+	<script src="./script.js" defer></script>	<!-- defer means the script is loaded after the html is loaded -->
+	<title>Tic Tac Toe</title>
 </head>
 <body>
-	<h1>Tic Tac Toe</h1>
-<table >
-	<tr>
-		<td></td>
-		<td class="sides"></td>
-		<td></td>
-	</tr>
-	<tr>
-		<td class="covers"></td>
-		<td id="center"></td>
-		<td class="covers"></td>
-	</tr>
-	<tr>
-		<td></td>
-		<td class="sides"></td>
-		<td></td>
-	</tr>
-		
+	<h1>
+		Tic Tac Toe
+	</h1>
+	<!-- <div id="stripe">
+		<button id="reset">New Colors</button>
+		<span id="message"></span>
+		<button class="mode">Easy</button>
+		<button class="mode selected">Hard</button>
+	</div> -->
+
+	<div class="enter-players">
+		<form id="player-form">
+			<div class="player-btn">
+				<label>Player X
+					<input type="text" placeholder="Enter name" name="playerX" id="playerX" class="name-input">
+				</label>
+			</div>
+			<div class="player-btn">
+				<label>Player O
+					<input type="text" placeholder="Enter name" name="playerO" id="playerO" class="name-input">
+				</label>
+			</div>
+			<input type="submit" class="submit-btn" value="Start">
+		</form>
+	</div>
+
+	<div class="board" id="board">
+		<div class="cell" data-cell></div>
+		<div class="cell" data-cell></div>
+		<div class="cell" data-cell></div>
+		<div class="cell" data-cell></div>
+		<div class="cell" data-cell></div>
+		<div class="cell" data-cell></div>
+		<div class="cell" data-cell></div>
+		<div class="cell" data-cell></div>
+		<div class="cell" data-cell></div>
+	</div>
+
+	<!-- <div class="reset reset-hidden">
+		<div class="reset-text"></div>
+		<button class="replay-btn" value="replay">
+			<span class="clear-board">Clear Board</span>
+		</button>
+	</div> -->
+
+	<div class="winning-message" id="winningMessage">
+		<div data-winning-message-text></div>
+		<button id="restartButton">Restart</button>
+	</div>
 </body>
 </html>
